@@ -23,16 +23,18 @@ const InputField: React.FC<InputFieldProps> = ({
   };
 
   return (
-    <div className="flex flex-col gap-2">
-      <Label htmlFor={attribute}>{label}</Label>
-      <Input
-        id={attribute}
-        type="text"
-        placeholder='Enter text'
-        value={currentValue}
-        onChange={handleInputChange}
-      />
-    </div>
+    <>
+      <div className="flex flex-col items-start">
+        {/* <Label htmlFor={attribute}>{label}</Label> */}
+        <Input
+          type="text"
+          placeholder='text'
+          value={currentValue}
+          onChange={handleInputChange}
+          className='mt-2'
+        />
+      </div>
+    </>
   );
 };
 
